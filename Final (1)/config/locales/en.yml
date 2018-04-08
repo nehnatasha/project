@@ -1,0 +1,68 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  Здравствуйте,: "Hello,"
+  Заведения: "Places"
+  Домой: "Home"
+  Контакты: "Contacts"
+  Зарегистрироваться: "Sign Up"
+  Войти: "Sign In"
+  Выйти: "Sign out"
+  Рус: "Rus"
+  Кафе: "Cafe"
+  Бары: "Bars"
+  Рестораны: "Restaurants"
+  Кафе ПушкинЪ: "Cafe Pushkin"
+  Подробнее: "Learn More"
+  Легендарный ресторан русской дворянской кухни «Кафе Пушкинъ». Туристический аттракцион русской кухни с налетом аристократизма.: "The legendary restaurant of Russian noble cuisine 'Cafe Pushkin'. Tourist attraction of Russian cuisine with a touch of aristocracy."
+  Бар Cuba Libre: "Cuba Libre Bar"
+  Cuba Libre bar — это настоящий остров свободы в суете большого города.: "Cuba Libre bar is a real island of freedom in the bustle of a big city."
+  Ресторан Bjorn: "Bjorn Restaurant"
+  «Bjorn» - ресторан северной кухни. Меню содержит традиционные скандинавские блюда, а также их необычную интерпретацию от шеф-повара.: '"Bjorn" - a restaurant of northern cuisine. The menu contains traditional Scandinavian dishes, as well as their unusual interpretation from the chef.'
+  Ресторан White Rabbit: "White Rabbit Restaurant"
+  White Rabbit - ресторан на последнем этаже в историческом центре Москвы приглашает Вас попробовать изысканную кухню и насладиться панорамой столицы.: "White Rabbit - a restaurant on the top floor in the historic center of Moscow invites you to try the delicious cuisine and enjoy the panorama of the capital."
+  Описание: "Description"
+  До сих пор ресторан номер один в Москве — место, куда сразу же ведут любого приезжего иностранца. Несмотря на интерьер, универсальное заведение, работающее круглосуточно и подходящее для любого случая.: "Until now, the number one restaurant in Moscow is the place where any foreigner immediately leads. Despite the interior, a universal institution, working around the clock and suitable for any occasion."
+  Москва, ул. Тверской бульвар, дом 26-А: "Moscow, Tverskoy boulevard, house 26-A"
+  Телефон +7 (495) 739-00-33: "Phone +7 (495) 739-00-33"
+  Телефон: "Phone"
+  Распорядитель приемов: "Receptionist"
+  Бренд-менеджер: "Brand Manager"
+  Шумакова Мария: "Shumakova Maria"
+  Работаем ежедневно: "We work daily"
+  Работаем круглосуточно: "We work round the clock"
+  Группа ВК: "Group VK"
+  Работаем: "We work"
+  пн-вс: "Mon-Sun"
+  вс/пн/вт/ср: "Sun / Mon / Tues / Wed"
+  чт/пт/сб: "Thu / Fri / Sat"
+  Банкеты: "Banquets"

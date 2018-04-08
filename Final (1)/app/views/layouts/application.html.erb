@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Final</title>
+  <%= csrf_meta_tags %>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <a class="navbar-brand" href="/main/mainPage"><%=t('Домой', default: 'Домой')%></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/main/restaurants"><%=t('Заведения', default: 'Заведения')%></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="https://vk.com/alex__zhuravlev"><%=t('Контакты', default: 'Контакты')%></a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-md-0">
+        <% if user_signed_in? %>
+            <a style="padding-right: 10px"><%=t('Здравствуйте,', default: 'Здравствуйте,')%> <%= current_user.email %></a>
+            <%= link_to t('Выйти', default: 'Выйти'), destroy_user_session_path, :method => :delete, class: "btn btn-primary" %>
+            <p style="padding-right: 10px"></p>
+        <% else %>
+            <%= link_to t('Войти', default: 'Войти'), new_user_session_path, class: "btn btn-primary" %>
+            <p style="padding-right: 10px"></p>
+            <%= link_to t('Зарегистрироваться', default: 'Зарегистрироваться'), new_user_registration_path, class: "btn btn-primary" %>
+            <p style="padding-right: 10px"></p>
+        <% end %>
+      </form>
+      <form class="nav-item<%= ' active' if I18n.locale == :ru %>">
+        <%= link_to t('Рус', default: 'Рус'), {locale: :ru}, style: "padding-right: 10px" %>
+      </form>
+      <form class="nav-item'<%= ' active' if I18n.locale == :en %>">
+        <%= link_to 'Eng', {locale: :en} %>
+      </form>
+    </div>
+  </nav>
+</header>
+<body>
+<%= yield %>
+<ul class="pagination justify-content-center">
+</ul>
+<hr>
+<footer class="container">
+  <p></p>
+  <p>&copy; Created by Alex Zhuravlev 2017</p>
+</footer>
+</body>
+</html>
